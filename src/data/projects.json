@@ -1,0 +1,42 @@
+[
+  {
+    "type": "website",
+    "title": "Quiz Easy",
+    "description": "A full-stack Next.js quiz platform with backend APIs for quiz and user data, Google Gemini API-powered dynamic question generation, and analytics for scores, accuracy, and time taken.",
+    "media": "https://quizeasy-hazel.vercel.app/",
+    "role": "Next.js · Google Gemini API",
+    "year": "",
+    "category": "Full Stack",
+    "image": "./Asset/img/projects/quiz-easy.png"
+  },
+  {
+    "type": "website",
+    "title": "File Sharing Web App",
+    "description": "Cloud Share is a Spring Boot and React.js file-management platform using MongoDB, with file upload and download, public and private access controls, Spring Security and Clerk authorization, plus Razorpay subscriptions and transaction logging.",
+    "media": "https://cloudsharewebapp.vercel.app/",
+    "role": "React.js · Spring Boot · MongoDB",
+    "year": "",
+    "category": "Full Stack",
+    "image": "./Asset/img/projects/cloud-share.png"
+  },
+  {
+    "type": "website",
+    "title": "3-D Portfolio Website",
+    "description": "A 3-D portfolio website featured on Nikhil Singh's personal portfolio.",
+    "media": "https://nikhell-website.vercel.app/",
+    "role": "3-D web portfolio",
+    "year": "",
+    "category": "Websites",
+    "image": "./Asset/img/projects/3d-portfolio.png"
+  },
+  {
+    "type": "image",
+    "title": "AI Guru",
+    "description": "A project listed in the featured projects section of Nikhil Singh's portfolio. A separate public demo link and further project details are not listed.",
+    "media": "",
+    "role": "",
+    "year": "",
+    "category": "AI",
+    "image": "./Asset/img/projects/ai-guru.png"
+  }
+]

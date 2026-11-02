@@ -1,0 +1,26 @@
+[
+  {
+    "file": "azure.svg",
+    "name": "Microsoft Azure"
+  },
+  {
+    "file": "cplusplus.svg",
+    "name": "C++"
+  },
+  {
+    "file": "git.svg",
+    "name": "Git"
+  },
+  {
+    "file": "javascript.svg",
+    "name": "JavaScript"
+  },
+  {
+    "file": "microsoftsqlserver.svg",
+    "name": "Microsoft SQL Server"
+  },
+  {
+    "file": "react.svg",
+    "name": "React"
+  }
+]
