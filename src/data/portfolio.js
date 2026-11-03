@@ -3,8 +3,8 @@ import archive from "./projects.json";
 export const categories = ["All", "Full Stack", "Websites", "AI"];
 export const featured = [
   "Quiz Easy",
-  "File Sharing Web App",
-  "3-D Portfolio Website",
+  "Cloud Share",
+  "Nikhil Singh Portfolio",
 ]
   .map((title) => archive.find((project) => project.title === title))
   .filter(Boolean);

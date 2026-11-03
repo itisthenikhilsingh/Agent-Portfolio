@@ -2,7 +2,7 @@
   {
     "type": "website",
     "title": "Quiz Easy",
-    "description": "A full-stack Next.js quiz platform with backend APIs for quiz and user data, Google Gemini API-powered dynamic question generation, and analytics for scores, accuracy, and time taken.",
+    "description": "Built with Next.js 14, this full-stack quiz platform uses the Google Gemini API to generate interactive quizzes. It supports multiple-choice and open-ended gameplay, real-time scoring, and quiz history. Prisma with PostgreSQL powers data modeling, while NextAuth handles authentication; the app is deployed on Vercel.",
     "media": "https://quizeasy-hazel.vercel.app/",
     "role": "Next.js · Google Gemini API",
     "year": "",
@@ -11,10 +11,10 @@
   },
   {
     "type": "website",
-    "title": "File Sharing Web App",
-    "description": "Cloud Share is a Spring Boot and React.js file-management platform using MongoDB, with file upload and download, public and private access controls, Spring Security and Clerk authorization, plus Razorpay subscriptions and transaction logging.",
+    "title": "Cloud Share",
+    "description": "Built a full-stack file management platform with React.js and Spring Boot, supporting secure uploads and downloads with a public/private visibility toggle. Spring Security and Clerk authentication protect user accounts and isolate private directories. Razorpay powers premium subscriptions with server-side order creation, payment verification, and transaction history logging. MongoDB stores file metadata and supports efficient retrieval and secure, unique share links for public files.",
     "media": "https://cloudsharewebapp.vercel.app/",
-    "role": "React.js · Spring Boot · MongoDB",
+    "role": "React.js · Spring Boot · MongoDB · Spring Security · Clerk · Razorpay",
     "year": "",
     "category": "Full Stack",
     "image": "./Asset/img/projects/cloud-share.png"
@@ -38,5 +38,15 @@
     "year": "",
     "category": "AI",
     "image": "./Asset/img/projects/ai-guru.png"
+  },
+  {
+    "type": "website",
+    "title": "Nikhil Singh Portfolio",
+    "description": "The portfolio website you're viewing, built to present Nikhil's experience, projects, and technical skills through a responsive React interface with spring-driven scroll animations.",
+    "media": "https://portfolio-swarn-agent.vercel.app/",
+    "role": "React · Vite · Framer Motion",
+    "year": "2026",
+    "category": "Websites",
+    "image": "./Asset/img/projects/portfolio-site.jpg"
   }
 ]
