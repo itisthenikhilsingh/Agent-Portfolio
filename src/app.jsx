@@ -20,6 +20,7 @@ export default function App() {
   const startupSwarm = document.documentElement.hasAttribute('data-swarm-startup');
   const [motionOn, setMotionOn] = useState(() => startupSwarm ? false : initialMotionOn);
   const [swarmActive, setSwarmActive] = useState(false);
+  const [swarmTour, setSwarmTour] = useState(false);
   const [swarmStatus, setSwarmStatus] = useState('');
   const motionBeforeSwarm = useRef(initialMotionOn);
   const autoSwarmStarted = useRef(false);
@@ -38,6 +39,7 @@ export default function App() {
   };
   const startSwarm = useCallback((automatic = false) => {
     if (!automatic) motionBeforeSwarm.current = motionOn;
+    setSwarmTour(!automatic);
     setMotionOn(false);
     setSwarmStatus('Loading local swarm engine.');
     setSwarmActive(true);
@@ -51,6 +53,7 @@ export default function App() {
   const finishSwarm = useCallback((completed = false) => {
     document.documentElement.removeAttribute('data-swarm-startup');
     setSwarmActive(false);
+    setSwarmTour(false);
     setMotionOn(motionBeforeSwarm.current);
     if (completed) window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -60,7 +63,7 @@ export default function App() {
       <a className="skip-link" href="#about">Skip to about</a>
       <motion.div className="reading-progress" style={{ scaleX: enabled ? progress : scrollYProgress }} />
       <Header enabled={enabled} onToggle={toggle} onSwarm={startSwarm} />
-      {swarmActive && <SwarmBuild onFinish={finishSwarm} onStatus={setSwarmStatus} />}
+      {swarmActive && <SwarmBuild autoTour={swarmTour} onFinish={finishSwarm} onStatus={setSwarmStatus} />}
       {swarmActive && <span className="swarm-build-status" role="status" aria-live="polite">{swarmStatus}</span>}
       <main>
         <Hero onProject={setProject} />

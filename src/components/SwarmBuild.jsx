@@ -1,11 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
-export default function SwarmBuild({ onFinish, onStatus }) {
+export default function SwarmBuild({ autoTour, onFinish, onStatus }) {
+  const autoTourRef = useRef(autoTour);
+
+  useEffect(() => {
+    autoTourRef.current = autoTour;
+  }, [autoTour]);
+
   useEffect(() => {
     let active = true;
     let pollTimer;
     let revealTimer;
     let sawHost = false;
+    let engineReady = false;
     let startedTour = false;
     let startedAutoLive = false;
     const script = document.createElement('script');
@@ -39,13 +46,18 @@ export default function SwarmBuild({ onFinish, onStatus }) {
             document.documentElement.removeAttribute('data-swarm-startup');
           }, 550);
         }
-        if (tourButton && !startedTour && app?.engine?.ready) {
-          startedTour = true;
-          tourButton.dataset.autoTourStarted = 'true';
-          tourButton.click();
-          report('Swarm rebuild is touring the page. It will return to the live portfolio when complete; press Escape to stop early.');
+        if (!engineReady && app?.engine?.ready) {
+          engineReady = true;
+          if (!autoTourRef.current) {
+            report('Swarm is ready. Scroll down to guide the agents as they rebuild the page.');
+          }
         }
-        if (app?.complete && liveButton && !startedAutoLive) {
+        if (tourButton && autoTourRef.current && !startedTour && app?.engine?.ready) {
+          startedTour = true;
+          tourButton.click();
+          report('Swarm rebuild is touring the page. Press Escape to stop early.');
+        }
+        if (app?.complete && startedTour && liveButton && !startedAutoLive) {
           startedAutoLive = true;
           report('Swarm rebuild complete. Returning to the live portfolio.');
           liveButton.click();
@@ -57,7 +69,7 @@ export default function SwarmBuild({ onFinish, onStatus }) {
             report('Swarm rebuild finished.');
             onFinish(startedAutoLive);
           }
-        } else if (!startedTour && Date.now() - startedAt > 90000) {
+        } else if (!app?.engine?.ready && Date.now() - startedAt > 90000) {
           fail('The local swarm engine did not finish preparing the page. Check the browser console.');
         }
       }, 250);
