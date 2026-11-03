@@ -57,18 +57,18 @@ export default function App() {
   const close = useCallback(() => setProject(null), []);
   return <MotionContext.Provider value={enabled}>
     <MotionConfig reducedMotion={enabled ? 'user' : 'always'} transition={{ ease: EASE }}>
-      <a className="skip-link" href="#portfolio">Skip to projects</a>
+      <a className="skip-link" href="#about">Skip to about</a>
       <motion.div className="reading-progress" style={{ scaleX: enabled ? progress : scrollYProgress }} />
       <Header enabled={enabled} onToggle={toggle} onSwarm={startSwarm} />
       {swarmActive && <SwarmBuild onFinish={finishSwarm} onStatus={setSwarmStatus} />}
       {swarmActive && <span className="swarm-build-status" role="status" aria-live="polite">{swarmStatus}</span>}
       <main>
         <Hero onProject={setProject} />
+        <About />
+        <Journey onProject={setProject} />
         <Portfolio onProject={setProject} />
         <Awards onProject={setProject} />
         <Breakdown />
-        <About />
-        <Journey onProject={setProject} />
         <Contact onProject={setProject} />
       </main>
       <footer className="footer">

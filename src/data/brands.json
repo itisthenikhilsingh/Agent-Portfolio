@@ -1,5 +1,33 @@
 [
   {
+    "file": "csharp.svg",
+    "name": "C#"
+  },
+  {
+    "file": "dotnet.svg",
+    "name": ".NET"
+  },
+  {
+    "file": "dotnetcore.svg",
+    "name": "ASP.NET Core"
+  },
+  {
+    "file": "efcore.png",
+    "name": "Entity Framework Core"
+  },
+  {
+    "file": "visualstudiocode.svg",
+    "name": "Visual Studio Code"
+  },
+  {
+    "file": "tailwindcss.svg",
+    "name": "Tailwind CSS"
+  },
+  {
+    "file": "vitejs.svg",
+    "name": "Vite"
+  },
+  {
     "file": "azure.svg",
     "name": "Microsoft Azure"
   },

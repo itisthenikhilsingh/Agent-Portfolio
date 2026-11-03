@@ -14,19 +14,32 @@ export const experiences = [
     date: "NOV 2025 – PRESENT",
     title: "Software Engineer",
     place: "Mphasis · VFS Global Visa Processing Platform · Mumbai",
-    text: "Owns the Agent Appointment module, developing six core services with 40+ RESTful endpoints using ASP.NET Core for appointment and center operations, including day open/close workflows, slot configuration, agent documents, and sub-user management. Optimized appointment date-closing workflows, reducing database round trips from approximately five to two per date and lowering P95/P99 latency by 33%. Also delivered re-biometrics, notification and SLA reporting APIs, Track & Trace, and VSC device-management workflows.",
+    bullets: [
+      "Own the Agent Appointment module across six ASP.NET Core services and 40+ REST endpoints.",
+      "Deliver appointment and center workflows for day opening and closing, slot configuration, agent documents, and sub-user management.",
+      "Reduced date-closing database round trips from about five to two per date, lowering P95/P99 latency by 33%.",
+      "Built re-biometrics, notification, SLA reporting, Track & Trace, and VSC device-management workflows.",
+    ],
   },
   {
     date: "SEP 2025 – NOV 2025",
     title: "Associate DevOps Engineer Intern",
     place: "Biz2Credit (Biz2X) · Noida",
-    text: "Developed a React and Flask DevOps dashboard and deployed it on scalable AWS EC2 instances to improve infrastructure visibility and reduce incident response time. Automated 100% of SSL/TLS certificate lifecycles with AWS ACM and Boto3, eliminating manual validation errors across internal and external domains. Engineered a serverless AWS Lambda workflow to monitor certificate expiry and auto-generate Jira tickets, helping ensure zero downtime.",
+    bullets: [
+      "Built a React and Flask DevOps dashboard and deployed it on scalable AWS EC2 instances.",
+      "Automated all SSL/TLS certificate lifecycles with AWS ACM and Boto3, eliminating manual validation errors across internal and external domains.",
+      "Created a serverless AWS Lambda workflow to monitor certificate expiry and generate Jira tickets, helping prevent downtime.",
+    ],
   },
   {
     date: "FEB 2025 – MAY 2025",
     title: "Trainee Software Engineer",
     place: "Mphasis · Mumbai",
-    text: "Engineered a full-stack employee onboarding portal using Spring Boot and Angular, reducing onboarding time by over 95% and increasing adoption across internal teams. Developed automated notifications, workflow dashboards, and responsive API-driven UIs that improved data processing speed by 30%. Collaborated in Agile sprints to deliver iteratively and coordinate across teams.",
+    bullets: [
+      "Built a Spring Boot and Angular employee onboarding portal, reducing onboarding time by over 95%.",
+      "Developed automated notifications, workflow dashboards, and responsive API-driven interfaces, improving data processing speed by 30%.",
+      "Collaborated across teams in Agile sprints to deliver features iteratively.",
+    ],
   },
 ];
 
